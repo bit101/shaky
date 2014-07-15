@@ -59,5 +59,8 @@ Experiment changing both segSize and shake to create a lot of different shaky ef
 ![ellipses](demo_images/ellipses.png "Ellipses")
 ![quadratic curve](demo_images/quadraticcurve.png "Quadratic Curve")
 ![bezier curve](demo_images/beziercurve.png "Bezier Curve")
+
+This shows the relationship of the segSize and shaky properties. Here, shaky increases left to right, and segSize decreases top to bottom.
+
 ![segSize and shaky](demo_images/segSizeShaky.png "segSize and shaky properties")
 
