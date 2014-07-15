@@ -1,6 +1,8 @@
 shaky
 ====
 
+When talking about traditional drawing on paper, many people say, "I can't draw a straight line." But with traditional computer graphics, you can usually ONLY draw straight lines. Let's fix that.
+
 shaky is a Canvas/Context2D wrapper that adds shaky drawing methods. Most of the drawing related methods of Context2D are proxied, either directly, or into shaky version. In addition, there are a few new useful shaky shape drawing methods.
 
 ### Methods:
