@@ -9,8 +9,8 @@ window.onload = function() {
 	// circle();
 	// ellipse();
 	// quadratic();
-	// bezier();
-	segSizeShake();
+	bezier();
+	// segSizeShake();
 
 
 	function squares() {
