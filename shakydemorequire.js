@@ -1,4 +1,4 @@
-(function() {
+require(["shaky"], function(shaky) {
 	var s = shaky.create("canvas");
 	s.setSize(window.innerWidth, window.innerHeight);
 
@@ -104,4 +104,4 @@
 
 		});
 	}
-}());
+});
