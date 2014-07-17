@@ -1,6 +1,8 @@
 shaky
 ====
 
+When talking about traditional drawing on paper, many people say, "I can't draw a straight line." But with traditional computer graphics, you can usually ONLY draw straight lines. Let's fix that.
+
 shaky is a Canvas/Context2D wrapper that adds shaky drawing methods. Most of the drawing related methods of Context2D are proxied, either directly, or into shaky version. In addition, there are a few new useful shaky shape drawing methods.
 
 ### Methods:
@@ -47,3 +49,18 @@ segSize controls the resolution of the shaky instance. Say you use lineTo(x, y).
 shake controls the random offset of each point or line segment. shake is a total range so if shake is 10 and you do a moveTo to 100, 100, you will actually wind up moving to somewhere from 95, 95 to 105, 105
 
 Experiment changing both segSize and shake to create a lot of different shaky effects.
+
+### Demo images
+
+![squares](demo_images/squares.png "Squares")
+![lines](demo_images/lines.png "Lines")
+![arcs](demo_images/arcs.png "Arcs")
+![circles](demo_images/circles.png "Circles")
+![ellipses](demo_images/ellipses.png "Ellipses")
+![quadratic curve](demo_images/quadraticcurve.png "Quadratic Curve")
+![bezier curve](demo_images/beziercurve.png "Bezier Curve")
+
+This shows the relationship of the segSize and shaky properties. Here, shaky increases left to right, and segSize decreases top to bottom.
+
+![segSize and shaky](demo_images/segSizeShaky.png "segSize and shaky properties")
+
