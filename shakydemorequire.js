@@ -9,8 +9,9 @@ require(["shaky"], function(shaky) {
 	// circle();
 	// ellipse();
 	// quadratic();
-	bezier();
+	// bezier();
 	// segSizeShake();
+	hatch();
 
 
 	function squares() {
@@ -103,5 +104,35 @@ require(["shaky"], function(shaky) {
 			s.stroke();
 
 		});
+	}
+
+	function hatch() {
+		s.segSize = 10;
+		s.shake = 0;
+		var res = 100,
+			div = res / 20
+		for(var i = 0; i < s.width; i += res) {
+			for(var j = 0; j < s.height; j += res) {
+				s.beginPath();
+				for(var y = j + div; y <= j + res / 2 - div; y += div) {
+					s.moveTo(i - div, y);
+					s.lineTo(i + res / 2 + div, y);
+				}
+				for(var x = i + res / 2 + div; x <= i + res - div; x += div) {
+					s.moveTo(x, j - div);
+					s.lineTo(x, j + res / 2 + div);
+				}
+				for(var y = j + res / 2 + div; y <= j + res - div; y += div) {
+					s.moveTo(i + res / 2 - div, y);
+					s.lineTo(i + res + div, y);
+				}
+				for(var x = i + div; x <= i + res / 2 - div; x += div) {
+					s.moveTo(x, j + res / 2 - div);
+					s.lineTo(x, j + res + div);
+				}
+				s.stroke();
+				s.shake += .03;
+			}
+		}
 	}
 });
